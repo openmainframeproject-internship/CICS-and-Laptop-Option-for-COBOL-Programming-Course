@@ -1,0 +1,2 @@
+#"C:\Program Files (x86)\Micro Focus\Enterprise Developer Build Tools\bin\cobol.exe" "C:\OpenMainframeProject\cobol-programming-course\COBOL Programming Course #1 - Getting Started\Labs\cbl\CBL0001.cobol" DELINT USEC:\OpenMainframeProject\cobol-programming-course\OFFHost\System\loadlib\mfant217897754169013901.dir ;
+^"C:\OpenMainframeProject\cobol-programming-course\COBOL Programming Course #1 - Getting Started\Labs\cbl\CBL0001.cobol"

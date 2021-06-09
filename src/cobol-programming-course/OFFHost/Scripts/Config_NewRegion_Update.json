@@ -1,0 +1,19 @@
+{
+  "CN": "string",
+  "description": "",
+  "mfConfig": "",
+  "mfCASRemoteDebug": 1,
+  "mfCASMTOEnabled": 1,
+  "mfCASBatchEnabled": 1,
+  "mfCASSysDir": "$ESP\\Logs",
+  "mfCASCICSSIT": "DEMOSIT",
+  "mfCASTXTRANP": "$ESP\\Loadlib;$ESP\\SysLoadlib",
+  "mfCASTXFILEP": "$ESP\\catalog\\Data",
+  "mfCASTXMAPP": "$ESP\\Loadlib;$ESP\\SysLoadlib",
+  "mfCASTXRDTP": "$ESP\\RDEF",
+  "mfCASCICSEZASOKET": 0,
+  "mfCASJCLPATH": "$ESP\\Loadlib;$ESP\\SysLoadlib",
+  "mfCASMFSYSCAT": "$ESP\\catalog\\CATALOG.DAT",
+  "mfCASJCLALLOCLOC": "$ESP\\Data",
+  "mfCASJCLSYSPROCLIB": "SYS1.PROCLIB"
+}

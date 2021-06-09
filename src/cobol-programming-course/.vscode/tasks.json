@@ -1,0 +1,98 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Create JES Batch Server",
+            "type": "shell",
+            "command": "${workspaceFolder}/OFFHost/Scripts/MF_Provision_Region.ps1 -RegionName OMPTRAIN -SystemBase ${workspaceFolder}/OFFHOST/system",
+            "options": {
+                "cwd": "${workspaceFolder}/OFFHost/Scripts"
+            }
+        },
+        {
+            "label": "Start JES Batch Server",
+            "type": "shell",
+            "command": "${workspaceFolder}/OFFHost/Scripts/MF_Region_Start.ps1",
+            "options": {
+                "cwd": "${workspaceFolder}/OFFHost/Scripts"
+            }
+        },
+        {
+            "label": "Stop JES Batch Server",
+            "type": "shell",
+            "command": "${workspaceFolder}/OFFHost/Scripts/MF_Region_Stop.ps1",
+            "options": {
+                "cwd": "${workspaceFolder}/OFFHost/Scripts"
+            }
+        },
+        {
+            "label": "Get Status of JES Batch Server",
+            "type": "shell",
+            "command": "${workspaceFolder}/OFFHost/Scripts/MF_Region_Status.ps1",
+            "options": {
+                "cwd": "${workspaceFolder}/OFFHost/Scripts"
+            }
+        },
+        {
+            "label": "Reset JES Batch Server",
+            "type": "shell",
+            "command": "${workspaceFolder}/OFFHost/Scripts/MF_Region_Reset.ps1",
+            "options": {
+                "cwd": "${workspaceFolder}/OFFHost/Scripts"
+            }
+        },
+        {
+            "label": "Submit",
+            "type": "shell",
+            "command": "${workspaceFolder}/OFFHost/Scripts/Submit_Job.ps1 -JCLFileName '${file}' -WSpaceFolder ${workspaceFolder}",
+            "options": {
+                "cwd": "${workspaceFolder}/OFFHost/Scripts"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Get Output from JES Batch Server",
+            "type": "shell",
+            "command": "${workspaceFolder}/OFFHost/Scripts/Get_Job_Output.ps1 -JobID ${input:JobID} -WSpaceFolder ${workspaceFolder}",
+            "options": {
+                "cwd": "${workspaceFolder}/OFFHost/Scripts"
+            }
+        },
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "ant",
+            "options": 
+            {
+                "env": {
+                    "ANT_HOME": "C:\\Program Files (x86)\\Micro Focus\\Enterprise Developer Build Tools\\ant",
+                    "JAVA_HOME": "C:\\Program Files (x86)\\Micro Focus\\Enterprise Developer Build Tools\\AdoptOpenJDK\\jre"
+                }
+            },
+            "args": [
+                "-f",
+                "${workspaceFolder}/OFFHost/Scripts/build.xml",
+                "-lib",
+                "'C:\\Program Files (x86)\\Micro Focus\\Enterprise Developer Build Tools\\bin\\mfant.jar'",
+                "-Dbasedir=${workspaceFolder}",
+                "-Dloaddir=${workspaceFolder}/OFFHost/System/loadlib",
+                "-Dprogname=${fileBasenameNoExtension}",
+                "-Dprogext=${fileExtname}"              
+            ],
+            "problemMatcher": [
+                "$COBOLAntCopybooks",
+                "$COBOLAnt"
+            ],
+        }
+    ], 
+    "inputs": [
+        {
+            "id": "JobID",
+            "description": "ID of Job to retrieve output for:",
+            "default": "",
+            "type": "promptString"
+        }
+    ]
+} 
