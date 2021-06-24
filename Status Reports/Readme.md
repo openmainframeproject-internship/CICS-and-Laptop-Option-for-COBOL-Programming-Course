@@ -8,9 +8,9 @@ Status Report Template: https://github.com/openmainframeproject-internship/resou
 | Document | Description | Document Name |
 |---|---|---|
 | Project Plan | Overall week by week plan of milestones | |
-| Week 1 Status Report | | | 
-| Week 2 Status Report | | |
-| Week 3 Status Report | | |
+| Week 1 Status Report | | [Weekly Project Status - Week 1.pdf](https://github.com/openmainframeproject-internship/CICS-and-Laptop-Option-for-COBOL-Programming-Course/blob/Develop/Status%20Reports/Weekly%20Project%20Status%20-%20Week%201.pdf) | 
+| Week 2 Status Report | | [Weekly Project Status - Week 2.pdf](https://github.com/openmainframeproject-internship/CICS-and-Laptop-Option-for-COBOL-Programming-Course/blob/Develop/Status%20Reports/Weekly%20Project%20Status%20-%20Week%202.pdf) |
+| Week 3 Status Report | | [Weekly Project Status - Week 3.pdf](https://github.com/openmainframeproject-internship/CICS-and-Laptop-Option-for-COBOL-Programming-Course/blob/Develop/Status%20Reports/Weekly%20Project%20Status%20-%20Week%203.pdf) |
 | Week 4 Status Report | | |
 | Week 5 Status Report | | |
 | Week 6 Status Report | | |
