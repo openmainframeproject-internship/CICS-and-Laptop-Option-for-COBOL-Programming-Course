@@ -11,9 +11,9 @@ Status Report Template: https://github.com/openmainframeproject-internship/resou
 | Week 1 Status Report | | [Weekly Project Status - Week 1.pdf](https://github.com/openmainframeproject-internship/CICS-and-Laptop-Option-for-COBOL-Programming-Course/blob/Develop/Status%20Reports/Weekly%20Project%20Status%20-%20Week%201.pdf) | 
 | Week 2 Status Report | | [Weekly Project Status - Week 2.pdf](https://github.com/openmainframeproject-internship/CICS-and-Laptop-Option-for-COBOL-Programming-Course/blob/Develop/Status%20Reports/Weekly%20Project%20Status%20-%20Week%202.pdf) |
 | Week 3 Status Report | | [Weekly Project Status - Week 3.pdf](https://github.com/openmainframeproject-internship/CICS-and-Laptop-Option-for-COBOL-Programming-Course/blob/Develop/Status%20Reports/Weekly%20Project%20Status%20-%20Week%203.pdf) |
-| Week 4 Status Report | | |
-| Week 5 Status Report | | |
-| Week 6 Status Report | | |
+| Week 4 Status Report | | [Weekly Project Status - Week 4.pdf](https://github.com/openmainframeproject-internship/CICS-and-Laptop-Option-for-COBOL-Programming-Course/blob/Develop/Status%20Reports/Weekly%20Project%20Status%20-%20Week%204.pdf) |
+| Week 5 Status Report | | [Weekly Project Status - Week 5.pdf](https://github.com/openmainframeproject-internship/CICS-and-Laptop-Option-for-COBOL-Programming-Course/blob/Develop/Status%20Reports/Weekly%20Project%20Status%20-%20Week%205.pdf) |
+| Week 6 Status Report | | [Weekly Project Status - Week 6.pdf](https://github.com/openmainframeproject-internship/CICS-and-Laptop-Option-for-COBOL-Programming-Course/blob/Develop/Status%20Reports/Weekly%20Project%20Status%20-%20Week%206.pdf) |
 | Week 7 Status Report | | |
 | Week 8 Status Report | | |
 | Week 9 Status Report | | |
@@ -21,10 +21,3 @@ Status Report Template: https://github.com/openmainframeproject-internship/resou
 | Week 11 Status Report | | |
 | Week 12 Status Report | | |
 | Week 13 Status Report | | |
-| Week 14 Status Report | | |
-| Week 15 Status Report | | |
-| Week 16 Status Report | | |
-| Week 17 Status Report | | |
-| Week 18 Status Report | | |
-| Week 19 Status Report | | |
-| Week 20 Status Report | | |
