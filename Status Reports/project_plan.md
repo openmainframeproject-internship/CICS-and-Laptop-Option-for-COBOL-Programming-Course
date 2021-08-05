@@ -1,11 +1,11 @@
 **Student's Name: Joshua Fogus**
 
-**Mentor: Gary Evans and Guy Sofer**
+**Mentor: Gary Evans and Misty Decker**
 
-**Project:COBOL Modernization**
+**Project: Laptop Option for COBOL Programming Course**
 
 **Project Description:**
-Based on the highly successful OMP COBOL Course, an new fork has been created to extend accessibility using a Cloud based environment. This project will further extend that self-contained environment to deliver new skills in the form CICS COBOL programming basics. In addition, the learning platform will be packaged such that it can be run on a laptop
+Based on the highly successful OMP COBOL Course, an new fork has been created to extend accessibility using a Cloud based environment. This project will further extend that self-contained environment packaging it in a virtual machine such that it can be run on a laptop without an internet connection.
 
 **Problem Definition:**
 Throughout the world there are students who want to learn mainframe skills, but for whom an internet connection is not available or consistent.  An offline version of the course that could be downloaded from a public or university internet connection can help to produce more equitable outcomes for this population.
@@ -24,6 +24,5 @@ VM based version of the training environment to be run 'stand alone' on a laptop
 | _Week 4_ | _Technical Training 3_ | _Complete Interskills CICS training_ |
 | _Week 5_ | _Start VM Build_ | _Initial Build of VM baseline_ |
 | _Week 6_ | _Test VM Build_ | _Co-ordinate testing of VM baseline_ |
-| _Week 7-10_ | _Build CICS Basics course_ | _Build labs and documentation for CICS basics programming course_ |
-| _Week 11-12_ | _Test CICS Basics course_ | _Co-ordinate testing of CICS basics programming course_ |
-| ... | ... | ... |
+| _Week 7-10_ | _Build Linux VM_ | _Build labs and documentation into a Linux VM_ |
+| _Week 11-12_ | _Script and Document Install_ | _Create a script for installation with documentation on parts_ |
