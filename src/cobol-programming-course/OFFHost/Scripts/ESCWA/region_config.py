@@ -41,12 +41,20 @@ def update_region(region_name, ip_address, template_file, env_file, region_descr
         raise ESCWAException('Unable to read template file: {}.'.format(template_file)) from exc
 
     try:
-        req_body['mfConfig'] = read_txt(env_file)
+        env_json = read_json(env_file)
+        # req_body['mfConfig'] = read_txt(env_file)
     except InputException as exc:
         raise ESCWAException('Unable to read env file: {}.'.format(env_file)) from exc
 
+    # Flatten and format environment json into flat text
+    env_key = next(iter(env_json))
+    env_json[env_key]['ESP'] = region_base
+    env_list = [key + '=' + val for key, val in env_json[env_key].items()]
+
     req_body['CN'] = region_name
-    req_body['mfConfig'] = req_body['mfConfig'].replace('##RegionBase', region_base)
+    req_body['mfConfig'] = '\n'.join([env_key] + env_list)
+    print(req_body['mfConfig'])
+    # req_body['mfConfig'] = req_body['mfConfig'].replace('##RegionBase', region_base)
     req_body['description'] = region_description
     req_body['mfCASSysDir'] = log_dir
     req_body['mfCASTXTRANP'] = lib_path

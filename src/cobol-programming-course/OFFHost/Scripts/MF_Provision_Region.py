@@ -16,7 +16,7 @@ from utilities.exceptions import ESCWAException
 
 
 def create_region(working_dir, sys_base, ip_address='127.0.0.1', region_name='OMPTRAIN', base_config='base.json',
-        env_file='./NewRegion_Environment.txt', update_config='update.json', alias_config='alias.json', 
+        env_config='env.json', update_config='update.json', alias_config='alias.json', 
         init_config='init.json', data_dir='datasets'):
 
     region_port = 9023
@@ -30,6 +30,7 @@ def create_region(working_dir, sys_base, ip_address='127.0.0.1', region_name='OM
     update_config = os.path.join(config_dir, update_config)
     alias_config = os.path.join(config_dir, alias_config)
     init_config = os.path.join(config_dir, init_config)
+    env_config = os.path.join(config_dir, env_config)
 
     datafile_list = [file for file in os.scandir(dataset_dir)]
 
@@ -61,7 +62,7 @@ def create_region(working_dir, sys_base, ip_address='127.0.0.1', region_name='OM
         sys.exit(1)
 
     try:
-        update_region(region_name, ip_address, update_config, env_file, 'Test Region', sys_base)
+        update_region(region_name, ip_address, update_config, env_config, 'Test Region', sys_base)
     except ESCWAException as exc:
         print('Unable to update region.')
         sys.exit(1)
