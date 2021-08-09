@@ -4,7 +4,7 @@ Description:  Function for configuring a Micro Focus server region.
 """
 
 import os
-from pickle import load
+import sys
 import requests
 from utilities.misc import create_headers, check_http_error
 from utilities.input import read_json, read_txt
@@ -18,6 +18,11 @@ def update_region(region_name, ip_address, template_file, env_file, region_descr
     uri = 'http://{}:10086/native/v1/regions/{}/86/{}'.format(ip_address, ip_address, region_name)
     req_headers = create_headers('CreateRegion', ip_address)
 
+    if sys.platform.startswith('win32'):
+        path_sep = ';'
+    else:
+        path_sep = ':'
+
     esp_alias = '$ESP'
     log_dir = os.path.join(esp_alias, 'Logs')
     loadlib_dir = os.path.join(esp_alias, 'Loadlib')
@@ -28,7 +33,7 @@ def update_region(region_name, ip_address, template_file, env_file, region_descr
     rdef_dir = os.path.join(esp_alias, 'RDEF')
 
     catalog_file = os.path.join(catalog_dir, 'CATALOG.DAT')
-    lib_path = '{}:{}'.format(loadlib_dir, sysloadlib_dir)
+    lib_path = loadlib_dir + path_sep + sysloadlib_dir
 
     try:
         req_body = read_json(template_file)
