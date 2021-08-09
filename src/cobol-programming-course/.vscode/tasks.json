@@ -4,80 +4,96 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Create JES Batch Server",
+            "label": "Initialize Coursework",
             "type": "shell",
-            "command": "${workspaceFolder}/OFFHost/Scripts/MF_Provision_Region.ps1 -RegionName OMPTRAIN -SystemBase ${workspaceFolder}/OFFHOST/system",
+            "command": "${workspaceFolder}/OFFHost/Scripts/Init_Course.py --WorkspaceFolder ${workspaceFolder}",
             "options": {
                 "cwd": "${workspaceFolder}/OFFHost/Scripts"
             }
         },
         {
-            "label": "Start JES Batch Server",
+            "label": "Create Micro Focus JES Batch Server",
             "type": "shell",
-            "command": "${workspaceFolder}/OFFHost/Scripts/MF_Region_Start.ps1",
+            "command": "${workspaceFolder}/OFFHost/Scripts/MF_Provision_Region.py --WorkspaceFolder ${workspaceFolder} --SystemBase ${workspaceFolder}/OFFHost/System",
             "options": {
                 "cwd": "${workspaceFolder}/OFFHost/Scripts"
             }
         },
         {
-            "label": "Stop JES Batch Server",
+            "label": "Start Micro Focus JES Batch Server",
             "type": "shell",
-            "command": "${workspaceFolder}/OFFHost/Scripts/MF_Region_Stop.ps1",
+            "command": "${workspaceFolder}/OFFHost/Scripts/MF_Region_Start.py",
             "options": {
                 "cwd": "${workspaceFolder}/OFFHost/Scripts"
             }
         },
         {
-            "label": "Get Status of JES Batch Server",
+            "label": "Stop Micro Focus JES Batch Server",
             "type": "shell",
-            "command": "${workspaceFolder}/OFFHost/Scripts/MF_Region_Status.ps1",
+            "command": "${workspaceFolder}/OFFHost/Scripts/MF_Region_Stop.py",
             "options": {
                 "cwd": "${workspaceFolder}/OFFHost/Scripts"
             }
         },
         {
-            "label": "Reset JES Batch Server",
+            "label": "Get Status of Micro Focus JES Batch Server",
             "type": "shell",
-            "command": "${workspaceFolder}/OFFHost/Scripts/MF_Region_Reset.ps1",
+            "command": "${workspaceFolder}/OFFHost/Scripts/MF_Region_Status.py",
             "options": {
                 "cwd": "${workspaceFolder}/OFFHost/Scripts"
             }
         },
         {
-            "label": "Submit",
+            "label": "Reset Micro Focus JES Batch Server",
             "type": "shell",
-            "command": "${workspaceFolder}/OFFHost/Scripts/Submit_Job.ps1 -JCLFileName '${file}' -WSpaceFolder ${workspaceFolder}",
+            "command": "${workspaceFolder}/OFFHost/Scripts/MF_Region_Reset.py",
+            "options": {
+                "cwd": "${workspaceFolder}/OFFHost/Scripts"
+            }
+        },
+        {
+            "label": "Delete Micro Focus JES Batch Server",
+            "type": "shell",
+            "command": "${workspaceFolder}/OFFHost/Scripts/MF_Delete_Region.py",
+            "options": {
+                "cwd": "${workspaceFolder}/OFFHost/Scripts"
+            }
+        },
+        {
+            "label": "Submit Job to Micro Focus JES Batch Server",
+            "type": "shell",
+            "command": "${workspaceFolder}/OFFHost/Scripts/Submit_Job.py --JCLFileName '${file}' --WSpaceFolder ${workspaceFolder}",
             "options": {
                 "cwd": "${workspaceFolder}/OFFHost/Scripts"
             },
             "problemMatcher": []
         },
         {
-            "label": "Get Output from JES Batch Server",
+            "label": "Get Output from Micro Focus JES Batch Server",
             "type": "shell",
-            "command": "${workspaceFolder}/OFFHost/Scripts/Get_Job_Output.ps1 -JobID ${input:JobID} -WSpaceFolder ${workspaceFolder}",
+            "command": "${workspaceFolder}/OFFHost/Scripts/Get_Job_Output.py --JobID ${input:JobID} --WSpaceFolder ${workspaceFolder}",
             "options": {
                 "cwd": "${workspaceFolder}/OFFHost/Scripts"
             }
         },
         {
-            "label": "Build",
+            "label": "Build Program",
             "type": "shell",
             "command": "ant",
             "options": 
             {
                 "env": {
-                    "ANT_HOME": "C:\\Program Files (x86)\\Micro Focus\\Enterprise Developer Build Tools\\ant",
-                    "JAVA_HOME": "C:\\Program Files (x86)\\Micro Focus\\Enterprise Developer Build Tools\\AdoptOpenJDK\\jre"
+                    "ANT_HOME": "/opt/apache-ant-1.10.11",
+                    "JAVA_HOME": "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.302.b08-0.el8_4.x86_64/jre"
                 }
             },
             "args": [
                 "-f",
                 "${workspaceFolder}/OFFHost/Scripts/build.xml",
                 "-lib",
-                "'C:\\Program Files (x86)\\Micro Focus\\Enterprise Developer Build Tools\\bin\\mfant.jar'",
+                "'/opt/microfocus/EnterpriseDeveloper/lib/mfant.jar'",
                 "-Dbasedir=${workspaceFolder}",
-                "-Dloaddir=${workspaceFolder}/OFFHost/System/loadlib",
+                "-Dloaddir=${workspaceFolder}/OFFHost/System/Loadlib",
                 "-Dprogname=${fileBasenameNoExtension}",
                 "-Dprogext=${fileExtname}"              
             ],
