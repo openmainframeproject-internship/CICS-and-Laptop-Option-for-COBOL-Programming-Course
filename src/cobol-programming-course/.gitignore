@@ -1,3 +1,10 @@
 .DS_Store
 *~
 *.pdf
+**/Scripts/build.xml
+**/__init__.py
+**/__pycache__/
+**/OFFHost/System/Data/*
+**/OFFHost/System/Loadlib/*
+**/OFFHost/System/Catalog/*
+**/OFFHost/Scripts/session/*
