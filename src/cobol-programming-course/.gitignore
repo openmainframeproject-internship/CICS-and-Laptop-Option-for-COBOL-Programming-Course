@@ -5,6 +5,8 @@
 **/__init__.py
 **/__pycache__/
 **/OFFHost/System/Data/*
+**/OFFHost/System/Logs/*
 **/OFFHost/System/Loadlib/*
 **/OFFHost/System/Catalog/*
 **/OFFHost/Scripts/session/*
+**/Output/*
