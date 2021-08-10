@@ -1,6 +1,4 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
         {
@@ -80,29 +78,28 @@
             "label": "Build Program",
             "type": "shell",
             "command": "ant",
-            "options": 
-            {
+            "options": {
                 "env": {
-                    "ANT_HOME": "/opt/apache-ant-1.10.11",
-                    "JAVA_HOME": "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.302.b08-0.el8_4.x86_64/jre"
+                    "ANT_HOME": "C:\\Program Files (x86)\\Ant\\apache-ant-1.10.11",
+                    "JAVA_HOME": "C:\\Program Files (x86)\\Micro Focus\\Enterprise Developer\\AdoptOpenJDK\\jre"
                 }
             },
             "args": [
                 "-f",
                 "${workspaceFolder}/OFFHost/Scripts/build.xml",
                 "-lib",
-                "'/opt/microfocus/EnterpriseDeveloper/lib/mfant.jar'",
+                "C:\\Program Files (x86)\\Micro Focus\\Enterprise Developer\\bin\\mfant.jar",
                 "-Dbasedir=${workspaceFolder}",
                 "-Dloaddir=${workspaceFolder}/OFFHost/System/Loadlib",
                 "-Dprogname=${fileBasenameNoExtension}",
-                "-Dprogext=${fileExtname}"              
+                "-Dprogext=${fileExtname}"
             ],
             "problemMatcher": [
                 "$COBOLAntCopybooks",
                 "$COBOLAnt"
-            ],
+            ]
         }
-    ], 
+    ],
     "inputs": [
         {
             "id": "JobID",
@@ -111,4 +108,4 @@
             "type": "promptString"
         }
     ]
-} 
+}
