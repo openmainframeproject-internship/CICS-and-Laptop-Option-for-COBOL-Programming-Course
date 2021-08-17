@@ -4,8 +4,6 @@ Description:  A series of utility functions for reading input.
 """
 
 import json
-
-from requests import exceptions
 from utilities.exceptions import InputException
 
 

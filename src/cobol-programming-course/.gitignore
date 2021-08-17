@@ -10,3 +10,4 @@
 **/OFFHost/System/Catalog/*
 **/OFFHost/Scripts/session/*
 **/Output/*
+!**/.gitkeep
