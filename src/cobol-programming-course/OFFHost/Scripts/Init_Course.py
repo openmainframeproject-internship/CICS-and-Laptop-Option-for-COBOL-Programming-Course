@@ -51,7 +51,7 @@ def init_course(working_dir):
         # Works for EDBT, if MFED change to Enterprise Develoepr in java_home and mfant
         ant_home = 'C:\\Program Files (x86)\\Ant\\apache-ant-1.10.11'
         java_home = 'C:\\Program Files (x86)\\Micro Focus\\Enterprise Developer Build Tools\\AdoptOpenJDK\\jre'
-        mfant = 'C:\\Program Files (x86)\\Micro Focus\\Enterprise Developer Build Toolsr\\bin\\mfant.jar'
+        mfant = 'C:\\Program Files (x86)\\Micro Focus\\Enterprise Developer Build Tools\\bin\\mfant.jar'
     else:
         ant_home = '/opt/apache-ant-1.10.11'
         java_home = '/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.302.b08-0.el8_4.x86_64/jre'
