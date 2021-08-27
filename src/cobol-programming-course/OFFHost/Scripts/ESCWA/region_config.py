@@ -136,7 +136,7 @@ def add_datasets(region_name, ip_address, working_dir, datafile_list):
     """ Adds data sets to a Micro Focus server. """
 
     req_headers = create_headers('CreateRegion', ip_address)
-    labs_dir = os.path.join(working_dir, 'COBOL Programming Course #1 - Getting Started', 'Labs')
+    labs_dir = os.path.join(working_dir, 'COBOL Programming Course 1 - Getting Started', 'Labs')
     jclproc_dir = os.path.join(labs_dir, 'jclproc')
     user_data_file = os.path.join(labs_dir, 'data', 'data')
 
