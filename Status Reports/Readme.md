@@ -20,4 +20,5 @@ Status Report Template: https://github.com/openmainframeproject-internship/resou
 | Week 10 Status Report | Linux Environment Setup and Working | [Weekly Project Status - Week 10.pdf](https://github.com/openmainframeproject-internship/CICS-and-Laptop-Option-for-COBOL-Programming-Course/blob/Develop/Status%20Reports/Weekly%20Project%20Status%20-%20Week%2010.pdf) |
 | Week 11 Status Report | VMs Created and Ready for Testing | [Weekly Project Status - Week 11.pdf](https://github.com/openmainframeproject-internship/CICS-and-Laptop-Option-for-COBOL-Programming-Course/blob/Develop/Status%20Reports/Weekly%20Project%20Status%20-%20Week%2011.pdf) |
 | Week 12 Status Report | Final Blog Posts Written | [Weekly Project Status - Week 12.pdf](https://github.com/openmainframeproject-internship/CICS-and-Laptop-Option-for-COBOL-Programming-Course/blob/Develop/Status%20Reports/Weekly%20Project%20Status%20-%20Week%2012.pdf) |
-| Week 13 Status Report | | |
+| Week 13 Status Report | VM Bugs Fixed | [Weekly Project Status - Week 13.pdf](https://github.com/openmainframeproject-internship/CICS-and-Laptop-Option-for-COBOL-Programming-Course/blob/Develop/Status%20Reports/Weekly%20Project%20Status%20-%20Week%2013.pdf) |
+| Week 14 Status Report | | |
